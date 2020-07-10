@@ -1,0 +1,5 @@
+<div *ngIf="todolist$ | async as list; else loading"></div>
+
+<ng-template #loading>Loading...</ng-template>
+
+<app-todolist [todolist]="todolist$ | async"></app-todolist>
